@@ -1,6 +1,20 @@
-from request import soccer_req
-from response import coalesce_results, soccer_enrich, soccer_resp
-from utils import map_dict, recycle_args
+from .request import soccer_req
+from .response import coalesce_results, soccer_enrich, soccer_resp
+from .utils import map_dict, recycle_args
+
+class SOCcer:
+    """
+    A class for handling SOCcer API results
+    """
+    def __init__(self, problems, valid):
+        if problems.empty:
+            self.problems = None
+        else:
+            self.problems = problems
+        if valid.empty:
+            self.valid = None
+        else:
+            self.valid = valid
 
 def soccer_engine(job_title, job_desc = None, industry = None, n_results = 10, **kwargs):
     request = soccer_req(
@@ -25,4 +39,5 @@ def soccer(job_title, job_desc = None, industry = None, n_results = 10, **kwargs
         **kwargs
     )
     tst = map_dict(fun = soccer_engine, **fun_args)
-    return coalesce_results(tst)
+    tst_coalesce = coalesce_results(tst)
+    return SOCcer(tst_coalesce['problems'], tst_coalesce['valid'])

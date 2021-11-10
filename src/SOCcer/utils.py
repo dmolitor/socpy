@@ -1,6 +1,3 @@
-from requests import get
-from urllib.parse import quote
-
 def map_dict(fun, **kwargs):
     lens = [len(kwargs[x]) for x in kwargs]
     if not all(x == lens[0] for x in lens):

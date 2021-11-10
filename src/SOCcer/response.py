@@ -2,8 +2,8 @@ from pandas import concat, json_normalize
 from requests.models import Response
 
 def coalesce_results(x):
-    problems = concat([i['problems'] for i in x])
-    valid = concat([i['validated'] for i in x])
+    problems = concat([i['problems'] for i in x]).reset_index(drop = True)
+    valid = concat([i['validated'] for i in x]).reset_index(drop = True)
     return {'problems': problems, 'valid': valid}
 
 def soccer_enrich(resp, **kwargs):

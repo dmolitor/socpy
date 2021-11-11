@@ -79,21 +79,9 @@ jobs = socpy.soccer(
 )
 ```
 
-The `jobs` object has two methods; namely, `jobs.problems` which contains any API requests that encountered issues, and `jobs.valid` which contains the output from all valid API requests. First, we can ensure that no problems were encountered when querying the API:
+The `jobs` object has two methods; namely, `jobs.problems` which contains any API requests that encountered issues, and `jobs.valid` which contains the output from all valid API requests.
 
-
-```python
-jobs.problems == None
-```
-
-
-
-
-    True
-
-
-
-Next, we can view the top three results for each of our three job descriptions.
+We can view the top three results for each of our three job descriptions.
 
 
 ```python
@@ -181,3 +169,5 @@ jobs.valid
   </tbody>
 </table>
 </div>
+
+

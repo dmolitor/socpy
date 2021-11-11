@@ -1,5 +1,5 @@
-# SOCcer
-Query the SOCcer API with Python.
+# socpy
+Query the [SOCcer API](https://soccer.nci.nih.gov/soccer/) with Python.
 
 ## Description
 This package provides an interface to query the SOCcer API.

@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="socpy",
-    version="0.0.4",
+    version="0.0.5",
     author="Daniel Molitor",
     author_email="molitdj97@gmail.com",
     description="Query the SOCcer API",
@@ -21,9 +21,11 @@ setup(
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     install_requires=[
-        'pandas',
-        'requests',
-        'setuptools'
+        "pandas",
+        "requests",
+        "setuptools"
     ],
+    include_package_data=True,
+    package_data={"": ["data/*.csv"]},
     python_requires=">=3.6",
 )

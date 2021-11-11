@@ -6,13 +6,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="SOCcer",
+    name="socpy",
     version="0.0.4",
     author="Daniel Molitor",
     author_email="molitdj97@gmail.com",
     description="Query the SOCcer API",
     long_description=long_description,
-    url="https://github.com/dmolitor/SOCcer-py",
+    url="https://github.com/dmolitor/socpy",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

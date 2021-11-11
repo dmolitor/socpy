@@ -2,16 +2,19 @@
 # -*- coding: utf-8 -*-
 from setuptools import find_packages, setup
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
+"""
+Query the SOCcer API with Python. Returns results in a
+structured format (pandas dataframes).
+"""
 
 setup(
     name="socpy",
-    version="0.0.5",
+    version="0.0.6",
     author="Daniel Molitor",
     author_email="molitdj97@gmail.com",
     description="Query the SOCcer API",
-    long_description=long_description,
+    long_description=__doc__,
+    long_description_content_type="text/plain",
     url="https://github.com/dmolitor/socpy",
     classifiers=[
         "Programming Language :: Python :: 3",

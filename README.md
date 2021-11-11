@@ -67,7 +67,7 @@ job_desc.head(3)
 
 
 
-Now, using socpy to return the top three SOC matches for each:
+Now, using `socpy` to return the top three SOC matches for each:
 
 
 ```python
